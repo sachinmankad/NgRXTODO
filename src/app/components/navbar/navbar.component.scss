@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    background: #9c27b0;
+
+    .brand-name {
+        // color: #9c27b0;
+        color: #fff;
+        // font-weight: 700;
+    }
+}

@@ -1,0 +1,15 @@
+
+<div class="row m-0 mb-2">
+    <div class="col-md-12 p-3">
+        <form class="form my-2">
+            <div class="form-row m-0 align-items-center justify-content-between">
+                <div class="col-md-11 d-flex flex-row">
+                    <input type="text" class="form-control input-sm flex-grow-1" placeholder="Create a Task Here..." [(ngModel)]="todo.description" name="description" />
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-sm align-self-end button-add" (click)="addTodo()">Add Task!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

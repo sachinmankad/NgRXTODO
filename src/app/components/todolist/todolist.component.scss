@@ -1,0 +1,41 @@
+.todo-card {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.07);
+    box-sizing: border-box;
+    .check-box {
+        font-size: 18px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .default {
+        .fa-check-square {
+            color: #ccc;
+        }
+        .task-details {
+            text-decoration: none;
+        }
+    }
+    .completed {
+        .fa-check-square {
+            color: #9c27b0;
+        }
+        .task-details {
+            text-decoration: line-through;
+	        color:#cdcdcd;
+        }
+    }
+
+    .action-group {
+        border: 0;
+        .action-btn {
+            font-size: 24px;
+            margin: 5px 20px;
+        } 
+        .btn-icons {
+           color: #dfbee5;
+           &:hover {
+               color: #9c27b0;
+           }
+        }        
+    }
+}

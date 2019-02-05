@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+// $primary-font-color: #9e9e9e; 
+// $primary-color: #9c27b0;
+
+body{
+    margin: 0;
+    pdding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #9e9e9e;
+}
+.border-green {border:1px solid green;}
+.border-red {border:1px solid red;}
+.border-blue {border:1px solid blue;}
+.border-yellow {border:1px solid yellow;}
+.border-purple {border:1px solid purple;}

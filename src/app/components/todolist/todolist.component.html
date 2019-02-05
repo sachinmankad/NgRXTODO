@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h5 class="mb-4">TODO LIST</h5>
+      <div class="card todo-card p-2 my-2 mb-4" *ngFor="let todo of todos | async; let i = index">
+        <div class="todo-line-box d-flex flex-row align-items-center">
+          <div class="d-flex flex-row flex-grow-1 px-2" [ngClass]="(!todo.finished) ? 'default':'completed'">
+            
+            <div class="flex-grow-0 px-4 align-self-center">
+              <div class="check-box" (click)="toggleTodo(todo)">
+                  <i class="fas fa-check-square"></i>
+              </div>
+            </div>
+
+            <div class="flex-grow-1 flex-wrap-row align-self-center">
+                <span class="task-details" [ngClass]="(todo.isEdit) ? 'd-none' : '' ">{{todo.description}}</span>
+                <input type="text" class="form-control input-sm" [(ngModel)]="todo.description" name="description" [ngClass]="(!todo.isEdit) ? 'd-none' : '' "/>
+            </div>
+
+          </div>
+
+          <div class="action-group p-2 d-flex flex-row flex-grow-0 align-items-center">
+            <span class="action-btn btn-icons" [ngClass]="(!todo.isEdit) ? 'd-none' : ''" (click)="updateTodo(todo)">
+              <i class="fas fa-save"></i>
+            </span>
+            <span class="action-btn btn-icons" [ngClass]="(todo.isEdit || todo.finished) ? 'd-none' : '' " (click)="editTodo(todo)">
+              <i class="fas fa-edit"></i>
+            </span>
+            <span class="action-btn btn-icons" [ngClass]="(todo.isEdit) ? 'd-none' : '' " (click)="removeTodo(i)">
+              <i class="fas fa-trash"></i>
+            </span>
+          </div>  
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
